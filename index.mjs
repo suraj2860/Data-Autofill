@@ -8,7 +8,7 @@ const port = 3000; // Choose the desired port number
 // Middleware to parse JSON request bodies
 app.use(express.json());
 
-app.get('/', (req, res) => {
+app.get('/hello', (req, res) => {
     res.send('Hello, World!');
 });
 
