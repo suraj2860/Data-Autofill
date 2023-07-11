@@ -1,5 +1,7 @@
 import express from 'express';
 
+import {} from 'dotenv/config';
+
 const app = express();
 const port = 3000; // Choose the desired port number
 
@@ -24,7 +26,7 @@ app.post('/api/autofill', async (req, res) => {
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': '705664fdd1mshb693105cd284e0bp1350fejsnb4c5635a647a',
+            'X-RapidAPI-Key': process.env.api_key,
             'X-RapidAPI-Host': 'us-zip-code-information.p.rapidapi.com'
         }
     };
